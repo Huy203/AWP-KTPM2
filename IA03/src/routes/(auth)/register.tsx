@@ -35,9 +35,11 @@ const RegisterComponent = () => {
     const onSubmit: SubmitHandler<FormFields> = data => signUp.mutate(data);
 
     if (signUp.isPending) {
-        return <div className="flex h-screen w-screen items-center justify-center">
-            <Indicator />
-        </div>
+        return (
+            <div className="flex h-screen w-screen items-center justify-center">
+                <Indicator />
+            </div>
+        );
     }
 
     return (
